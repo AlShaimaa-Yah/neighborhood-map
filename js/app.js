@@ -28,18 +28,12 @@ function AppViewModel() {
                 var response = marker.response.venues[0];
                 self.street = response.location.formattedAddress[0];
                 self.city = response.location.formattedAddress[1];
-                self.zip = response.location.formattedAddress[3];
-                self.country = response.location.formattedAddress[4];
-                self.category = response.categories[0].shortName;
 
                 self.htmlContentFoursquare =
                     '<h5 class="iw_subtitle">(' + self.category +
                     ')</h5>' + '<div>' +
                     '<h6 class="iw_address_title"> Address: </h6>' +
                     '<p class="iw_address">' + self.street + '</p>' +
-                    '<p class="iw_address">' + self.city + '</p>' +
-                    '<p class="iw_address">' + self.zip + '</p>' +
-                    '<p class="iw_address">' + self.country +
                     '</p>' + '</div>' + '</div>';
 
                 infowindow.setContent(self.htmlContent + self.htmlContentFoursquare);
