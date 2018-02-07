@@ -34,6 +34,7 @@ function AppViewModel() {
                     ')</h5>' + '<div>' +
                     '<h6 class="iw_address_title"> Address: </h6>' +
                     '<p class="iw_address">' + self.street + '</p>' +
+
                     '</p>' + '</div>' + '</div>';
 
                 infowindow.setContent(self.htmlContent + self.htmlContentFoursquare);
